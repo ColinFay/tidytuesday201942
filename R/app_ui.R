@@ -40,7 +40,7 @@ app_ui <- function() {
           style = "display:none"
         ),
         fluidRow(
-          id = "geom_bar", mod_dataviz_ui("dataviz_ui_4", "barplot")
+          id = "geom_bar", mod_dataviz_ui("dataviz_ui_4", "bar")
         ) %>% tagAppendAttributes(
           style = "display:none"
         ),

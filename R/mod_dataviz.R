@@ -14,18 +14,16 @@
 #' @export 
 #' @import shiny
 #' @importFrom htmltools tags
-mod_dataviz_ui <- function(id, type = c("point", "hist", "boxplot", "barplot")){
+mod_dataviz_ui <- function(id, type = c("point", "hist", "boxplot", "bar")){
   ns <- NS(id)
   tagList(
-    col_12(
-      h3(
+    col_3(
+      h4(
         sprintf(
           "Create a geom_%s", type
         )
-      ) 
-    ), 
-    col_3(
-      if (type == "boxplot" | type =="barplot") {
+      ),
+      if (type == "boxplot" | type =="bar") {
         selectInput(
           ns("x"),
           "x", 
@@ -55,20 +53,20 @@ mod_dataviz_ui <- function(id, type = c("point", "hist", "boxplot", "barplot")){
           1
         )
       }, 
-      if (type != "boxplot" & type != "barplot"){
+      if (type != "boxplot" & type != "bar"){
         selectInput(
           ns("color"),
           "color", 
           choices = names_that_are(c("logical", "character"))
         )
-      } else if (type == "barplot"){
+      } else if (type == "bar"){
         selectInput(
           ns("fill"),
           "fill", 
           choices = names_that_are(c("logical", "character"))
         )
       }, 
-      if (type == "barplot"){
+      if (type == "bar"){
         checkboxInput(
           ns("coord_flip"),
           "coord_flip"
@@ -223,7 +221,7 @@ mod_dataviz_server <- function(input, output, session, type){
       
     }
     
-    if (type == "barplot"){
+    if (type == "bar"){
       fill <- sym(input$fill)
       r$plot <- ggplot(big_epa_cars, aes(!!x, fill = !!fill)) +
         geom_bar()+ 
