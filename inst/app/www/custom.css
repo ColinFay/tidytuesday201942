@@ -1,0 +1,34 @@
+/* background color of the navbar */
+.navbar{ background: white;}
+
+/*Change the color of the link + put hand on hover */
+.nav-link , .navbar-brand{ color: #000000; cursor: pointer;}
+
+/* Margin of the links in the nav */
+.nav-link{ margin-right: 1em !important;}
+
+/* background color on hover of the nav links */
+.nav-link:hover{ background: #f4f4f4; color: #f97300; }
+
+/* background color of the navbar */
+.navbar-collapse{ justify-content: flex-end;}
+
+/* background color of the navbar */
+.navbar-toggler{  background:#fff !important;}
+
+.navbar {
+  /*border-top: 2px solid black; */
+  border-bottom: 2px solid black;
+  padding-top : 2em;
+  padding-left : 5em;
+  padding-right : 5em;
+}
+
+.row{
+  margin-top:2em;
+}
+
+.container {
+  margin-right: 6em;
+  margin-left: 6em; 
+}
