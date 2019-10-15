@@ -2,13 +2,13 @@
 
 <style>
 summary:focus { 
-  outline: none 
+outline: none 
 }
 </style>
 
 <h2>Exploring the "Big mtcars" dataset</h2>
 
-<p>This application allows you to build your own dataviz for #TidyTuesday, 019-10-15. 
+<p>This application allows you to build your own dataviz for #TidyTuesday, 2019-10-15. 
 
 <p><em>Tidy Tuesday</em> is a weekly social data project in R. Find more about this project on <a href ="https://www.rfordatasci.com/">rfordatasci.com</a> and on the <a href ="https://github.com/rfordatascience/tidytuesday">GitHub repo</a>. 
 
@@ -23,15 +23,26 @@ summary:focus {
 
 <ul>
 
-<li><a href = "javascript:void(0)" onclick = "$('a[data-value =\'geom_point'\').click()')">geom_point generator</a></li>
-<li> <a href = "javascript:void(0)" onclick = "$("a[data-value ='geom_hist'").click()')">geom_hist generator</a></li>
-<li> <a href = "javascript:void(0)" onclick = "$("a[data-value ='geom_boxplot'").click()')">geom_boxplot generator</a></li>
-<li> <a href = "javascript:void(0)" onclick = "$("a[data-value ='geom_bar'").click()')">geom_bar generator</a></li>
+<li><a href = "javascript:void(0)" onclick = "geom_point()">geom_point generator</a></li>
+<li> <a href = "javascript:void(0)" onclick = "geom_hist()">geom_hist generator</a></li>
+<li> <a href = "javascript:void(0)" onclick = "geom_boxplot()">geom_boxplot generator</a></li>
+<li> <a href = "javascript:void(0)" onclick = "geom_bar()">geom_bar generator</a></li>
 
 </ul>
 
 <script>
-
+function geom_point() {
+  $("a[data-value ='geom_point'").click()
+}
+function geom_hist() {
+  $("a[data-value ='geom_hist'").click()
+}
+function geom_boxplot() {
+  $("a[data-value ='geom_boxplot'").click()
+}
+function geom_bar() {
+  $("a[data-value ='geom_bar'").click()
+}
 </script>
 
 

@@ -21,21 +21,33 @@ app_ui <- function() {
         class="container", 
         fluidRow(
           id = "raw_data",  mod_raw_ui("raw_ui_1")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         ),
         fluidRow(
           id = "geom_point", mod_dataviz_ui("dataviz_ui_1", "point")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         ),
         fluidRow(
           id = "geom_hist", mod_dataviz_ui("dataviz_ui_2", "hist")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         ),
         fluidRow(
           id = "geom_boxplot", mod_dataviz_ui("dataviz_ui_3", "boxplot")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         ),
         fluidRow(
           id = "geom_bar", mod_dataviz_ui("dataviz_ui_4", "barplot")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         ),
         fluidRow(
           id = "about", mod_about_ui("about_ui_1")
+        ) %>% tagAppendAttributes(
+          style = "display:none"
         )
       )
       

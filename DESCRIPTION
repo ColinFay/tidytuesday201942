@@ -17,7 +17,9 @@ Imports:
     dplyr,
     styler,
     withr,
-    pkgload
+    pkgload,
+    colourvalues,
+    markdown
 RoxygenNote: 6.1.1
 URL: http://www.github.com/ColinFay/tidytuesday201942
 BugReports: http://www.github.com/ColinFay/tidytuesday201942/issues

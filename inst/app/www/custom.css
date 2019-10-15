@@ -32,3 +32,11 @@
   margin-right: 6em;
   margin-left: 6em; 
 }
+
+.btn {
+    border: 1px solid #ced4da;
+}
+
+blockquote {
+  font-size: 0.75em;
+}

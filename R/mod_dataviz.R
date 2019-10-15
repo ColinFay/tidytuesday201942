@@ -79,40 +79,52 @@ mod_dataviz_ui <- function(id, type = c("point", "hist", "boxplot", "barplot")){
         "theme", 
         choices = themess()
       ), 
-      selectInput(
-        ns("palette"),
-        "palette", 
-        choices = colourvalues::colour_palettes()
-      ), 
+      if (type != "boxplot"){
+        selectInput(
+          ns("palette"),
+          "palette", 
+          choices = colourvalues::colour_palettes()
+        )
+      }, 
       textInput(
         ns("title"),
         "Title",
         value = ""
       ), 
-      actionButton(
-        ns("go"), 
-        "Render plot"
-      ) %>%
-        tags$div(align = "right")
+      tags$blockquote(
+        "Note that the rendering is not reactive, you'll need to click on the 'Render Plot' button to see your graph."
+      )
     ),
     column(
-      9, 
-      plotOutput(ns("plot")) %>%
-        tagAppendAttributes(
-          onclick = sprintf(
-            "Shiny.setInputValue('%s', true, {priority : 'event'})", 
-            ns("show")
+      9,
+      col_12(
+        actionButton(
+          ns("go"), 
+          "Render Plot", icon = icon("arrow-down")
+        ) %>%
+          tags$div(align = "center", style = "padding-left:2em")
+      ), 
+      HTML("&nbsp;")
+      ,
+      col_12(
+        plotOutput(ns("plot")) %>%
+          tagAppendAttributes(
+            onclick = sprintf(
+              "Shiny.setInputValue('%s', true, {priority : 'event'})", 
+              ns("show")
+            )
           )
-        ), 
+      ) , 
       HTML("&nbsp;"),
-      col_6(
+      col_12(
         tags$p(
           "Click on the graph to see the code"
-        )
+        ) %>%
+          tags$div(align = "center")
       ), 
-      col_6(
+      col_12(
         downloadButton(ns("dl")) %>%
-          tags$div(align = "right") 
+          tags$div(align = "right")
       )
     )
   )

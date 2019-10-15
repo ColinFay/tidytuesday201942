@@ -2,8 +2,8 @@
 nav_ <- function(name, x){
   tags$nav(
     class="navbar navbar-expand-lg fixed-top ", 
-    tags$a(
-      class="navbar-brand", href="#", name
+    tags$p(
+      name
     ), 
     # For portait mode
     tags$button(

@@ -22,6 +22,8 @@ usethis::use_package( "rlang" ) # To call each time you need a new package
 usethis::use_package( "dplyr" ) # To call each time you need a new package
 usethis::use_package( "styler" ) # To call each time you need a new package
 usethis::use_package( "withr" ) # To call each time you need a new package
+usethis::use_package( "colourvalues" ) # To call each time you need a new package
+usethis::use_package( "markdown" ) # To call each time you need a new package
 usethis::use_pipe()
 ## 2.3 Add tests
 
