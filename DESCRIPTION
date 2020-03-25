@@ -1,27 +1,36 @@
 Package: tidytuesday201942
 Title: A golem App for Tidy Tuesday
 Version: 0.0.0.9000
-Authors@R: person('Colin', 'Fay', email = 'contact@colinfay.me', role = c('cre', 'aut'))
+Authors@R: 
+    person(given = "Colin",
+           family = "Fay",
+           role = c("cre", "aut"),
+           email = "contact@colinfay.me")
 Description: A golem App for Tidy Tuesday.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+URL: http://www.github.com/ColinFay/tidytuesday201942
+BugReports: 
+    http://www.github.com/ColinFay/tidytuesday201942/issues
+Depends: 
+    R (>= 2.10)
 Imports: 
-    shiny,
+    colourvalues,
+    dplyr,
+    ggplot2,
+    glue,
     golem,
     htmltools,
     magrittr,
-    processx,
-    glue,
+    purrr,
     rlang,
-    dplyr,
+    shiny,
     styler,
     withr,
-    pkgload,
-    colourvalues,
     markdown
-RoxygenNote: 6.1.1
-URL: http://www.github.com/ColinFay/tidytuesday201942
-BugReports: http://www.github.com/ColinFay/tidytuesday201942/issues
 Suggests: 
+    pkgload,
+    processx,
     testthat
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
