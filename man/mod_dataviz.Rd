@@ -5,7 +5,7 @@
 \alias{mod_dataviz_server}
 \title{mod_dataviz_ui and mod_dataviz_server}
 \usage{
-mod_dataviz_ui(id, type = c("point", "hist", "boxplot", "barplot"))
+mod_dataviz_ui(id, type = c("point", "hist", "boxplot", "bar"))
 
 mod_dataviz_server(input, output, session, type)
 }

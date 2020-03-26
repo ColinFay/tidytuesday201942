@@ -25,6 +25,12 @@ usethis::use_package( "withr" ) # To call each time you need a new package
 usethis::use_package( "colourvalues" ) # To call each time you need a new package
 usethis::use_package( "markdown" ) # To call each time you need a new package
 usethis::use_pipe()
+
+
+attachment::att_amend_desc()
+usethis::use_package( "markdown" ) # To call each time you need a new package
+
+
 ## 2.3 Add tests
 
 usethis::use_test( "app" )

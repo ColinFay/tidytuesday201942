@@ -34,6 +34,15 @@ usethis::use_lifecycle_badge( "Experimental" )
 usethis::use_news_md( open = FALSE )
 usethis::use_git()
 
+## Hide files
+usethis::use_build_ignore("CODE_OF_CONDUCT.md")
+usethis::use_build_ignore("LICENSE.md")
+usethis::use_build_ignore("README.Rmd")
+usethis::use_build_ignore("app.R")
+usethis::use_build_ignore("data-raw/")
+usethis::use_build_ignore("dev/")
+usethis::use_build_ignore("manifest.json")
+
 ## 1.3 - Add a data-raw folder
 ## 
 ## If you have data in your package
