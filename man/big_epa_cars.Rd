@@ -4,7 +4,9 @@
 \name{big_epa_cars}
 \alias{big_epa_cars}
 \title{big_epa_cars}
-\format{Tibble with 41,804 features and 83 fields}
+\format{
+Tibble with 41,804 features and 83 fields
+}
 \usage{
 big_epa_cars
 }
